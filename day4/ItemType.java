@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
-   class demo{
-	private String name;
-	private double costPerDay;
-	private double deposit;
+
+public class ItemType {
+	
+	private  static String name;
+	private static double CostPerDay;
+	private static double Deposit;
 	
 	public String getName()
 	{
@@ -17,43 +19,42 @@ import java.util.Scanner;
 	
 	public double getCostPerday()
 	{
-		return costPerDay;
+		return CostPerDay;
 	}
 	
 	public void setCostPerDay(double costPerDay)
 	{
-		this.costPerDay=costPerDay;
+		CostPerDay=costPerDay;
 	}
 	
 	public double getDeposit()
 	{
-		return deposit;
+		return Deposit;
 	}
 	
 	public void setDeposit(double deposit)
 	{
-		this.deposit=deposit;
+		Deposit=deposit;
+	}
+	public void display()
+	{
+		System.out.println("Name:" +name);
+		System.out.println("Cost Per day:" +CostPerDay);
+		System.out.println("Deposit:" +Deposit);
 	}
 	
-	
-}
-public class ItemType {
-	
-	
-
-	public static void main(String[] args) {
-		
+	  public static void main(String[] args) {
 		
 		Scanner S=new Scanner(System.in);
 		System.out.println("Enter the Item type name:");
 		String name=S.next();
 		System.out.println("Enter the Cost Per day:");
-		double costPerDay=S.nextDouble();
+		double CostPerDay=S.nextDouble();
 		System.out.println("Enter the Deposit:");
-		double deposit=S.nextDouble();
+		double Deposit=S.nextDouble();
 		
 		ItemType D =new ItemType();
-	   
+	    D.display();
 		
 	
 		
