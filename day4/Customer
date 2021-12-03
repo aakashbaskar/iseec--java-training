@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Customer {
 
 	String	customerName;
@@ -14,18 +16,36 @@ public class Customer {
 	}
 	
 	void displayDetails()
-	{
-		System.out.println(customerName + " " +customerEmail + " " +customerType + " " +customerAddress);
+	{ 
+		Scanner S=new Scanner(System.in);
+		
+		System.out.println("Enter the Customer details");
+		
+		System.out.println("Enter the Customer Name");
+		String customerName=S.next();
+		
+		System.out.println("Enter the Customer Email");
+		String customerEmail=S.next();
+		
+		System.out.println("Enter the Customer Type");
+		String customerType=S.next();
+		
+		System.out.println("Enter the Customer Address");
+		String customerAddress=S.next();
+		
+		
+		System.out.println("Name:" +customerName + " " + "Email:" +customerEmail + " " + "Type:" +customerType + " " + "Address:" +customerAddress);
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Customer c1=new Customer( );
-		Customer c2=new Customer();
+		Customer c1=new Customer("Rose" ,"rose@gmail.com" ,"Domestic" ,"India" );
+		Customer c2=new Customer("Kate" ,"kate@gmail.com" ,"Domestic" ,"Australia");
 		c1.displayDetails();
 		c2.displayDetails();
 
 	}
 
 }
+
