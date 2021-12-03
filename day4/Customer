@@ -1,0 +1,31 @@
+public class Customer {
+
+	String	customerName;
+	String	customerEmail;
+	String	customerType;
+	String	customerAddress;
+	
+	public Customer(String custName, String custEmail, String custType, String custAddress)
+	{
+	      customerName=custName;
+	      customerEmail=custEmail; 
+	      customerType=custType; 
+	      customerAddress=custAddress;
+	}
+	
+	void displayDetails()
+	{
+		System.out.println(customerName + " " +customerEmail + " " +customerType + " " +customerAddress);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Customer c1=new Customer( );
+		Customer c2=new Customer();
+		c1.displayDetails();
+		c2.displayDetails();
+
+	}
+
+}
