@@ -1,0 +1,148 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+class Address{
+	
+		 private String street;
+		 private String city;
+		 private Integer pincode;
+
+		 public Address()
+		 {
+			 
+		 }
+		 public Address(String street,String city,Integer pincode)
+		 {
+			 this.street=street;
+			 this.city=city;
+			 this.pincode=pincode;
+		 }
+		 
+		 public String getStreet()
+		 {
+			 return street;
+		 }
+		 
+		 public void setStreet(String street)
+		 {
+			 this.street=street;
+		 }
+		 
+		 public String getCity()
+		 {
+			 return city;
+		 }
+		 
+		 public void setCity(String City)
+		 {
+			 this.city=city;
+		 }
+		 public Integer getPincode()
+		 {
+			 return pincode;
+		 }
+		 
+		 public void setPincode(Integer pincode)
+		 {
+			 this.pincode=pincode;
+		 }
+		 
+		 public String toString()
+		 {
+			return street+ "," +city +"," +pincode; 
+		 }
+		 
+		 
+	
+}
+ class Customer1 {
+
+	
+	private String name;
+	private Address address;
+	 
+
+	 public Customer1()
+	 {
+		 
+	 }
+	 public Customer1(String name,Address address)
+	 {
+		 this.name=name;
+		 this.address=address;
+		 
+	 }
+	 
+	 public String getName()
+	 {
+		 return name;
+	 }
+	 
+	 public void setName(String name)
+	 {
+		 this.name=name;
+	 }
+	 
+	 public Address getAddress()
+	 {
+		 return address;
+	 }
+	 
+	 public void setAddress(Address address)
+	 {
+		 this.address=address;
+	 }
+	 
+	 public String toString()
+	 {
+		return name+ "," +address.toString(); 
+	 }
+	 
+  
+ }
+ 
+ public class main1{
+	 
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Customer customer=null;
+		Address address=null;
+		
+		try(Scanner scanner=new Scanner(System.in))
+		{
+			customer=new Customer();
+			address=new Address();
+			System.out.println("Enter the name");
+			customer.setName(scanner.next());
+			
+			System.out.println("Enter the street");
+			address.setStreet(scanner.next());
+			
+			System.out.println("Enter the city");
+			address.setCity(scanner.next());
+			
+			System.out.println("Enter the pincode");
+			address.setPincode(scanner.nextInt());
+			
+			customer.setAddress(address);
+			System.out.println(customer);
+		}
+		
+		catch(InputMismatchException  inputMismatchException){
+			
+			System.out.println("Error:Invalid data");
+		}
+		
+       catch(Exception exception){
+			
+			System.out.println(" An Error Occured");
+		}
+		
+		
+		
+		
+	}
+
+ }
+
